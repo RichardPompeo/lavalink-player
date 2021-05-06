@@ -1,17 +1,18 @@
 const { Client } = require("discord.js");
 const { Player } = require("../dist/index");
+require("dotenv").config();
 
 const client = new Client();
 
 const player = new Player(client, {
-  token: "NzEyNzg1OTU4MjMxMDgwOTkw.XsWnpw.CA9cx9Yi-dYNbhbBFoPMPiB-77w",
-  id: "712785958231080990",
-  clientId: "031c8c19932e4b0bb3d2ffffe46a9afe",
-  clientSecret: "f4b524cc250f465a81b5a5c28704c78f",
-  host: "localhost",
-  password: "grove",
+  token: process.env.TOKEN,
+  id: process.env.ID,
+  clientId: process.env.CLIENTID,
+  clientSecret: process.env.CLIENTSECRET,
+  host: process.env.HOST,
+  password: process.env.PASSWORD,
+  identifier: process.env.IDENTIFIER,
   retryDelay: 5000,
-  identifier: "bot",
   albumLimit: 100,
   playlistLimit: 100,
   convertUnresolved: false,
