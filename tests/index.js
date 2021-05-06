@@ -60,4 +60,4 @@ player
     client.channels.cache.get(player.textChannel).send(track.title);
   });
 
-client.login("NzEyNzg1OTU4MjMxMDgwOTkw.XsWnpw.CA9cx9Yi-dYNbhbBFoPMPiB-77w");
+client.login(process.env.TOKEN);
